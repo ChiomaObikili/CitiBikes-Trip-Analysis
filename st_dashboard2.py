@@ -24,8 +24,8 @@ page = st.sidebar.selectbox('Select an aspect of the analysis', [
 ])
 
 ########################## Import data ######################################
-df = pd.read_csv('reduced_data_to_plot.csv', index_col=0)
-top20 = pd.read_csv('top20.csv', index_col=0)
+df = pd.read_csv('reduced_data_to_plot_small.csv')  
+top20 = pd.read_csv('top20_small.csv')
 
 ########################### Pages ############################################
 
@@ -44,8 +44,9 @@ if page == "Intro page":
 
 # --- Weather component and bike usage ---
 elif page == 'Weather component and bike usage':
-    df = pd.read_csv('reduced_data_to_plot.csv', index_col=0)
-    top20 = pd.read_csv('top20.csv', index_col=0)
+    df = pd.read_csv('reduced_data_to_plot_small.csv')  
+    top20 = pd.read_csv('top20_small.csv')             
+
 
     # Making sure 'date' column exists and is datetime
     print("Columns in df:", df.columns.tolist())  # Debugging step
