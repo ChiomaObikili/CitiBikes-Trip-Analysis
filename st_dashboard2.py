@@ -141,10 +141,9 @@ elif page == 'Most popular stations':
 # --- Interactive map ---
 elif page == 'Interactive map with aggregated bike trips': 
     st.write("Interactive map showing aggregated bike trips over Newyork City")
-    path_to_html = "Newyork Bikes Trips Aggregated.html"
-    with open(path_to_html, 'r') as f:
+    # Load the smaller HTML map
+    with open("Newyork Bikes Trips Aggregated.html", 'r') as f:
         html_data = f.read()
-
     st.header("Aggregated Bike Trips in Newyork")
     st.components.v1.html(html_data,height=1000)
     st.markdown("#### Using the filter on the left hand side of the map we can check whether the most popular start stations also appear in the most popular trips.")
