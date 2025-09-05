@@ -1,7 +1,7 @@
-plotly==5.13.0
 streamlit==1.20.0
+pandas==2.1.1
+plotly==5.13.0
 matplotlib==3.7.1
-streamlit_keplergl
-pillow==9.4.0
-pandas
-numpy
+streamlit-keplergl==0.3.0
+numerize==0.12
+Pillow==9.4.0
