@@ -40,7 +40,7 @@ if page == "Intro page":
     st.markdown("- Recommendations")
     st.markdown("The dropdown menu on the left 'Aspect Selector' will take you to the different aspects of the analysis our team looked at.")
 
-    myImage = Image.open("Newyork pic1.WEBP") #source: https://nyc.hollandbikes.com/de/fahrradverleih-brooklyn/
+    myImage = Image.open("newyork_pic1.webp") #source: https://nyc.hollandbikes.com/de/fahrradverleih-brooklyn/
     st.image(myImage)
 
 # --- Weather component and bike usage ---
@@ -157,7 +157,7 @@ elif page == 'Interactive map with aggregated bike trips':
 # --- Recommendations / Conclusions ---
 else:
     st.header("Conclusions and recommendations")
-    bikes = Image.open("Newyork pic2.WEBP")
+    bikes = Image.open("newyork_pic1.webp")
     st.image(bikes)
     st.markdown("### Our analysis has shown that Citi Bikes should focus on the following objectives moving forward:")
 
