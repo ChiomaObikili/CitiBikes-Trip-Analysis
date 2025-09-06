@@ -8,6 +8,7 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 from PIL import Image
+import streamlit.components.v1 as components
 
 ########################### Initial settings ################################
 st.set_page_config(page_title='New York City Bikes Strategy Dashboard', layout='wide')
@@ -141,11 +142,13 @@ elif page == 'Most popular stations':
 # --- Interactive map ---
 elif page == 'Interactive map with aggregated bike trips': 
     st.write("Interactive map showing aggregated bike trips over Newyork City")
-    # Load the smaller HTML map
-    with open("Newyork Bikes Trips Aggregated.html", 'r') as f:
+
+    # Load the saved Kepler map (smaller version for deployment)
+    with open("Newyork Bikes Trips Aggregated.html", "r", encoding="utf-8") as f:
         html_data = f.read()
+
     st.header("Aggregated Bike Trips in Newyork")
-    st.components.v1.html(html_data,height=1000)
+    st.components.v1.html(html_data, height=800, scrolling=True)
     st.markdown("#### Using the filter on the left hand side of the map we can check whether the most popular start stations also appear in the most popular trips.")
     st.markdown("The most popular start stations are:")
     st.markdown("Wythe Ave & Metropolitan Ave, West End Ave, and West St & Liberty St. These locations stand out as key hubs for Citi Bike trips.")
