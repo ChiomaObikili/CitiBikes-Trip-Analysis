@@ -25,7 +25,7 @@ page = st.sidebar.selectbox('Select an aspect of the analysis', [
 ])
 
 ########################## Import data ######################################
-df = pd.read_csv('reduced_data_to_plot_small.csv')  
+df = pd.read_csv('reduced_data_to_plot_7.csv')  
 top20 = pd.read_csv('top20_small.csv')
 
 ########################### Pages ############################################
@@ -45,7 +45,7 @@ if page == "Intro page":
 
 # --- Weather component and bike usage ---
 elif page == 'Weather component and bike usage':
-    df = pd.read_csv('reduced_data_to_plot_small.csv')  
+    df = pd.read_csv('reduced_data_to_plot_7.csv')  
     top20 = pd.read_csv('top20_small.csv')             
 
 
@@ -56,7 +56,7 @@ elif page == 'Weather component and bike usage':
         df['date'] = pd.to_datetime(df['date'], errors='coerce')
         df = df.dropna(subset=['date'])
     else:
-        st.error("No 'date' column found in reduced_data_to_plot.csv")
+        st.error("No 'date' column found in reduced_data_to_7.csv")
         st.stop()
 
     # Aggregating daily bikes ride
